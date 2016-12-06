@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>login</title>
+<link href="../css/login.css" rel="stylesheet">
+</head>
+<body ng-app="loginmodule">
+<div class="container" id="doct">
+
+
+	<div class="login">
+	
+			<div><button onclick="GetRoomInfo();">测试?</button></div>
+         <img src="" class="imggif" />
+	</div>
+
+</div>	
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">      
+        function GetRoomInfo() {
+            $.ajax({
+                type: 'post',
+                url: '/simpleEMRService.ashx',
+                //url: 'http://1dp5014066.imwork.net/BaseService.ashx',
+                data: {
+                    "operationType": "New",
+                    doctorId: "26eeba3d-36db-4803-a210-ce2d83515887",
+                    treatmentstatus: "4", hospitalId: "04389D86-7D0E-49E4-824C-335927F4B570",
+                    strwhere: "隐形", emrCode: "201611300010",
+                    filepath: '201610150007-P1-u.stl201610150007-P1-l.stl', PCode: '13636661623', PPwd: '123456', doctorCode: '13636661623', doctorPwd: '123456', Key: '047565',
+                    factoryId: '60acd3a9-d980-497c-bb01-65582d2f8cdc', status: '7',
+                    hospitalId: "ea9c4b9f-49c2-440b-bc06-17881165b77f", strwhere: '<Script>测试<//Script>', treatmentstatus: 0, doctorRemarkDate: '2016-11-17 星期四', doctorRemark: '<Script>测试<//Script>',
+                    codetype: 0, code: 'j78qy', encode: '5EA5642C7266E972', Medical_history: "左下6牙四年前根管治疗后桩冠修复，四颗智齿四年前已拔除", allergy_history: "无", d0: "http://www.clearbos.com:8078/\simple_emr\201611300010\Anterior.jpg",
+                    d1: "http://www.clearbos.com:8078/\simple_emr\201611300010\Left.jpg", d2: "http://www.clearbos.com:8078/\simple_emr\201611300010\Lower.jpg", d3: "http://www.clearbos.com:8078/\simple_emr\201611300010\Right.jpg",
+                    d4: "http://www.clearbos.com:8078/\simple_emr\201611300010\Upper.jpg", f0: "http://www.clearbos.com:8078/\simple_emr\201611300010\45Profile.jpg", f1: "http://www.clearbos.com:8078/\simple_emr\201611300010\FrontalRepose.jpg",
+                    f2: "http://www.clearbos.com:8078/\simple_emr\201611300010\FrontalSmile.jpg", f3: "http://www.clearbos.com:8078/\simple_emr\201611300010\Profile.jpg", mailing: "温州苍南桥墩玉山路196-198伊美口腔门诊部", main_suit: "前牙突，下巴短",
+                    patientAge: "2016-11-10", patientName: "李馨", patientSex: " 0", patientTel: "13636666666", r0: "http://www.clearbos.com:8078/\simple_emr\201611300010\Cephalometric.jpg", r1: "http://www.clearbos.com:8078/\simple_emr\201611300010\Panoramic.jpg",
+                    therapeutic_schedule:"左侧磨牙关系调整成中性上前牙片切，关闭黑三角推上颌磨牙向后，整体内收，排齐整平36全冠不能粘附件"
+                 
+                  
+                },
+                dataType: 'jsonp',
+                success: function (data) {
+                    //获取数据
+                    console.log(data);
+                    //$(".imggif").attr("src", data.imagestram);
+                    //关闭当前页跳到下一页
+                },
+                error: function (data) {
+                    alert(data.responseText)
+                    console.log(data);
+                    console.log("denglu error");
+                }
+            })
+        }
+     
+        </script> 
+   </body>
+</html>

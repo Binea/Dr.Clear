@@ -1,0 +1,50 @@
+﻿@charset "utf-8";
+@charset "utf-8";
+/*公共样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+input,button,select,textarea { outline: none; }
+img { max-width: 100%; height: auto; }
+em,i { font-style: normal; }
+.img { border: none; width: 100%; height: auto; }
+.a { color: #00bfa5; }
+.col { color: #fff; }
+.pl { padding-left: 15px; }
+.pr { padding-right: 15px; }
+.ml { margin-left: 15px; }
+.mr { margin-right: 15px; }
+.center { text-align: center; }
+
+.btn { padding: 0 8px; height: 30px; line-height: 30px; text-align: center; color: #fff; border: 1px solid #00bfa5; display: inline-block; background: #00bfa5; font-size: 12px; cursor: pointer; }
+.defbtn { border: 1px solid #fff; background: #fff; color: #333; }
+/*提示信息*/
+.msg { position: fixed; z-index: 102; top: 3%; background-color: rgba(249,7,7,.8); transition: all 0.5s; -webkit-transition: all 0.5s; opacity: 0; color: #fff; padding: .8rem 1.2rem; letter-spacing: 1px; border-radius: 3px; }
+
+/*** 弹框 ***/
+.dialogbox.psd{display: none}
+.dialogbox ul { padding-left: 0px; }
+.dialogbox p,.dialogbox ul { margin: 0px; }
+.dialogbox *+p, .dialogbox *+ul { margin-top: 0px; }
+.dialogbox.psd .dialog-bg { background-color: rgba(0, 0, 0, 0.6); position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 100; width: 100%; height: 100%; }
+.dialogbox .dialog-bg { background-color: rgba(0, 0, 0, 0.6); position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 100; width: 100%; height: 100%; }
+.dialogbox .dialog { position: fixed; z-index: 101; width: 324px;height:240px; left: 50%; top: 50%; line-height: 25px; margin-top: -200px; margin-left: -162px; background:#fff;border-radius: 10px; }
+.dialogbox.psd .dialog { position: fixed; z-index: 101; width: 304px;height:375px; left: 50%; top: 50%; line-height: 25px; margin-top: -200px; margin-left: -162px; background:transparent; }
+.dialogbox .dialog .dialog-tit { padding: 15px 10px; font-size: 16px; }
+.dialogbox .dialog .dialog-content { font-size: 14px; font-family: "微软雅黑"; line-height: 25px; height: 100px; padding: 0 10px; }
+.dialogbox .dialog .dialog-btnbox { padding: 20px 0px; text-align: center; overflow: hidden; width: 100%; }
+.dialogbox .dialog .dialog-btnbox .btn { display: inline-block;float:left; border-radius: 5px; background-color: #00bae9; color: #fff; border: 1px solid #00bae9; width: 43%; font-size: 14px; text-align: center; padding: 8px 0; margin: 0 3%; letter-spacing: 1px; }
+.dialogbox .dialog .dialog-btnbox .cancel { color: #00bae9; background-color: #fff; }
+.dialogbox .dialog select { display: block; padding: 10px 5px; width: 100%; font-size: 14px; }
+.dialogbox .dialog input { width: 96%; padding: 10px 5px; margin-top: 15px; font-size: 14px; }
+
+.empty { padding: 20px 0; text-align: center; background-color: #fff; }
+.disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: .45;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+

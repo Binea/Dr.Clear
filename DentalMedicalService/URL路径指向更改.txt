@@ -1,0 +1,15 @@
+1.web.config中
+	filewebsite     图片访问路径
+	filePath        图片存储路径
+	filetempPath    图片缓存路径
+	linuxPath       Linux服务器图片路径
+	linuxsimperPath Linux服务器病例图片路径
+2.web.config中
+	ConnectionString 数据库连接字符串
+	ConStringEncrypt 是否加密
+3.ClearDesign、ClearDoctor、ClearWork
+	中apiAjax.js的this.host
+	 common.js的上传方法的url路径
+4.ClearWap、ClearWeixin、ClearWeb
+	中jk_config.js中的url路径
+		
